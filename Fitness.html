@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RamFitness</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+css
+Copy code
+body {
+  font-family: Arial, sans-serif;
+  background-color: #4CAF50;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 60px;
+  background-color: rgba(128, 255, 219, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2%;
+}
+
+header h1 {
+  color: blueviolet;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+header nav ul li {
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header nav ul li a.active,
+header nav ul li a:hover {
+  background-color: #555;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+#join-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.section1 {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10% 2%;
+}
+
+.section1 .content {
+  width: 30%;
+}
+
+.section1 img {
+  width: 100%;
+  max-width: 500px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.plan {
+  background-color: greenyellow;
+  padding: 20px;
+  margin: 20px;
+  flex: 1 1 calc(33.33% - 40px);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.plan.MOST_POPULAR {
+  border: 2px solid #337ab7;
+  background-color: #fff;
+}
+
+.plan h2 {
+  margin-top: 0;
+}
+
+.plan ul {
+  list-style: none;
+  padding: 0;
+}
+
+.plan li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.plan .price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #337ab7;
+}
+
+.plan .order-btn {
+  background-color: yellow;
+  color: rgb(0, 255, 149);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.plan .order-btn:hover {
+  background-color: #23527c;
+}
+
+.containers {
+  width: 90%;
+  max-width: 500px;
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.containers h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #ffcc00;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #ff9900;
+}
+
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+
+  .section1 {
+    flex-direction: column;
+    text-align: center;
+    padding: 5%;
+  }
+
+  .section1 .content,
+  .section1 img {
+    width: 100%;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .plan {
+    flex: 1 1 100%;
+    margin: 20px 0;
+  }
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>RamFitness</h1>
+    <nav>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#" id="join-btn">Join Now</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="section1">
+      <div class="content">
+        <h1>The best fitness gym in the town is here</h1>
+        <p>“I hated every minute of training, but I said,
+          Dont quit. Suffer now and live the rest of your
+           life as a champion.” Muhammad Ali</p>
+        <img src="images (1).jpeg" alt="Gym Image">
+      </div>
+      <div class="content">
+        <img src="images.jpeg" alt="Ram Image">
+      </div>
+    </section>
+    <hr>
+    <section>
+      <div class="container">
+        <div class="plan">
+          <h2>Start up</h2>
+          <ul>
+            <li>Free Domain</li>
+            <li>20 Email Addresses</li>
+            <li>5 GB Disk Space</li>
+            <li>15 GB Data Transfer</li>
+          </ul>
+          <p class="price">Start from $20.00 per month</p>
+          <button class="order-btn">ORDER NOW</button>
+        </div>
+        <div class="plan">
+          <h2>Business</h2>
+          <ul>
+            <li>Free Domain</li>
+            <li>30 Email Addresses</li>
+            <li>15 GB Disk Space</li>
+            <li>25 GB Data Transfer</li>
+          </ul>
+          <p class="price">Start from $40.00 per month</p>
+          <button class="order-btn">ORDER NOW</button>
+        </div>
+        <div class="plan MOST POPULAR">
+          <h2>Pro</h2>
+          <ul>
+            <li>Free Domain</li>
+            <li>50 Email Addresses</li>
+            <li>20 GB Disk Space</li>
+            <li>35 GB Data Transfer</li>
+          </ul>
+          <p class="price">Start from $60.00 per month</p>
+          <button class="order-btn">ORDER NOW</button>
+        </div>
+      </div>
+    </section>
+    <hr>
+    <section>
+      <div class="containers">
+        <h1>GET IN TOUCH WITH US</h1>
+        <p>Speak with our experts to share your specific requirements, which can provide customized solutions catering to your needs.</p>
+        <form>
+          <div class="form-group">
+            <label for="department">SELECT A DEPARTMENT</label>
+            <select id="department">
+              <option value="">Select a Department</option>
+              <option value="sales">Sales</option>
+              <option value="support">Support</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="name">Enter Name</label>
+            <input type="text" id="name" placeholder="Your Name">
+          </div>
+          <div class="form-group">
+            <label for="email">Enter Email</label>
+            <input type="email" id="email" placeholder="Your Email">
+          </div>
+          <div class="form-group">
+            <label for="phone">Enter Phone</label>
+            <input type="tel" id="phone" placeholder="Your Phone Number">
+          </div>
+          <div class="form-group">
+            <label for="state">Select a State</label>
+            <select id="state">
+              <option value="">Select a State</option>
+              <option value="AL">Alabama</option>
+              <option value="AK">Alaska</option>
+              <option value="AZ">Arizona</option>
+              <!-- Add more states here -->
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="city">Select City</label>
+            <select id="city">
+              <option value="">Select a City</option>
+              <option value="New York">New York</option>
+              <option value="Los Angeles">Los Angeles</option>
+              <option value="Chicago">Chicago</option>
+              <!-- Add more cities here -->
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="gym">Select Gym</label>
+            <select id="gym">
+              <option value="">Select a Gym</option>
+              <option value="Gym A">Gym A</option>
+              <option value="Gym B">Gym B</option>
+              <option value="Gym C">Gym C</option>
+              <!-- Add more gyms here -->
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Enter Message</label>
+            <textarea id="message" placeholder="Your Message"></textarea>
+          </div>
+          <button type="submit">SUBMIT</button>
+        </form>
+      </div>
+    </section>
+    <hr>
+  </main>
+</body>
+</html>
